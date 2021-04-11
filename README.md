@@ -60,6 +60,7 @@ This is an object detection task and the project uses [TensorFlow Object Detecti
 ├── train.record: TFRecord file of the partial training set. 
 ├── valid_df.csv: The newly created validation set.
 └── valid.record: TFRecord file of the validation set.
+└── Wheat_Head_Detection_YoloV4.ipynb : The notebook for YoloV4 Setup and Prediction
 ```
 
 **Note** 
@@ -83,20 +84,7 @@ Following are the results I got from TensorBoard while my model was training (fo
   ```
 - Follow instructions from [this piece](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_pets.md) on how to package an object detection application in TensorFlow Object Detection API and submit a training job to AI Platform. It also shows how to monitor performance with TensorBoard and export the trained model checkpoints as a frozen inference graph. 
 
-This project uses GCS buckets for storing intermediate training checkpoints along with all the other files necessary to run a TFOD API model on AI Platform. Following are the initial files from my GCS bucket:
-```
-$ gsutil ls gs://global_wd_faster_rcnn/data
-gs://global_wheat_detection/data/label_map.pbtxt
-gs://global_wheat_detection/data/model.ckpt.data-00000-of-00001
-gs://global_wheat_detection/data/model.ckpt.index
-gs://global_wheat_detection/data/model.ckpt.meta
-gs://global_wheat_detection/data/faster_rcnn_resnet101_pets.config
-gs://global_wheat_detection/data/train.record
-gs://global_wheat_detection/data/valid.record
-```
+- Run the Ipynb Notebook if you want to get the same results using YoloV4.
 
 ## Acknowledgement
-- ML-GDE program for granting me GCP credits.
-- TensorFlow Research Cloud.
-
-The project extensively uses GCP's AI offerings such as AI Platform. Specifically, I used AI Platform Notebooks and AI Platform Jobs. For storage, I used GCS buckets. 
+-  Sayak Paul for Faster-RCNN setup
