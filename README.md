@@ -87,4 +87,4 @@ Following are the results I got from TensorBoard while my model was training (fo
 - Run the Ipynb Notebook if you want to get the same results using YoloV4.
 
 ## Acknowledgement
--  Sayak Paul for Faster-RCNN setup
+-  Sayak Paul for Faster-RCNN Setup
